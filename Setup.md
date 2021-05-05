@@ -61,13 +61,13 @@
 
 # Common Troubleshooting points 
 
-# Troubleshooting Checklist:
+## Troubleshooting Checklist:
 
 1. Are configuration files present?
 2. Does gateway show as IN_SYNC?
 3. What error is being seen in  `/greengrass/ggc/var/log/user/us-east-1/aws` for the swCollector, ModbusTCPConnector & swPublisher logs?
 
-# Common issues
+## Common issues
 
 Failed to publish messages because an SDK client error occurred: 
     - No Service role attached to deployed Greengrass core
