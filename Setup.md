@@ -52,7 +52,7 @@
 `sudo chmod 700 /var/sitewise`
 
 
-# Modbus Commands 
+## Modbus Commands 
 
 `sudo  x86_64-linux-gnu/diagslave -a 1 -m tcp`
 
@@ -70,7 +70,8 @@
 ## Common issues
 
 Failed to publish messages because an SDK client error occurred: 
-    - No Service role attached to deployed Greengrass core
+
+- No Service role attached to deployed Greengrass core
 
 Sync Status won't show as IN_SYNC:
 
