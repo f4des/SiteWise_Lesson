@@ -57,7 +57,7 @@
 `sudo  x86_64-linux-gnu/diagslave -a 1 -m tcp`
 
 
-`modpoll -r 1201 -c 1 10.0.0.100 1234`
+`./modpoll -r 1201 -c 1 10.0.0.100 1234`
 
 # Common Troubleshooting points 
 
