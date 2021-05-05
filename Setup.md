@@ -67,25 +67,30 @@
 2. Does gateway show as IN_SYNC?
 3. What error is being seen in  `/greengrass/ggc/var/log/user/us-east-1/aws` for the swCollector, ModbusTCPConnector & swPublisher logs?
 
-# Common issues
+## Common issues
 
 Failed to publish messages because an SDK client error occurred: 
     - No Service role attached to deployed Greengrass core
 
 Sync Status won't show as IN_SYNC:
-    - This is most often due to the required connector not being present with the Greengrass core.
 
-swPublisher.log: Unable to load configuration file. Attempting to use environment variables
-    - This is often due to the swPublisher.config file being deleted. This won't propagate again, and will need to be manualy recreated or a new gateway created.
+- This is most often due to the required connector not being present with the Greengrass core.
 
-Error saving credentials: error storing credentials - err: exit status 1, out: 'Cannot autolaunch D-Bus without X11 $DISPLAY'
+swPublisher.log: Unable to load configuration file. Attempting to use environment variables:
 
-    - This one is usually more related to SiteWise edge, however is the result of a missing library that can be installed with:
-    $ sudo apt install gnupg2 pass
+- This is often due to the swPublisher.config file being deleted. This won't propagate again, and will need to be manualy recreated or a new gateway created.
+
+Error saving credentials: error storing credentials - err: exit status 1, out: 'Cannot autolaunch D-Bus without X11 $DISPLAY':
+
+  - This one is usually more related to SiteWise edge, however is the result of a missing library that can be installed with:
+  
+    `sudo apt install gnupg2 pass`
 
 The data is being sent to the cloud but not appearing in my model?
-    - This is often due to a misconfiguration of the data types in the model compared to the data coming from the source. The data types must match, for example, you can't read data as an int16 from the server, send it as a String to the Model which is expecting an Integer.
-    - Alternatively this is often due to the property alias that has been configured for the asset. This must match the property tag as it's written in the Modbus source, and in the case of OPC-UA, we must used a prepended '/'
+
+- This is often due to a misconfiguration of the data types in the model compared to the data coming from the source. The data types must match, for example, you can't read data as an int16 from the server, send it as a String to the Model which is expecting an Integer.
+
+- Alternatively this is often due to the property alias that has been configured for the asset. This must match the property tag as it's written in the Modbus source, and in the case of OPC-UA, we must used a prepended '/'
 
 
 # EDGE Setup 
