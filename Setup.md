@@ -61,7 +61,7 @@
 
 # Common Troubleshooting points 
 
-# Troubleshooting Checklist:
+## Troubleshooting Checklist:
 
 1. Are configuration files present?
 2. Does gateway show as IN_SYNC?
